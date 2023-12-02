@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{%for pessoa in pessoas %}
+<div class="bg-primary">
+<h2 class="container-fluid">Nome: {{pessoa.nome}}</h2>
+<p class="container-fluid">Idade: {{pessoa.idade}}</p>
+<p class="container-fluid">Chave Pix: {{pessoa.chave}}</p>
+<p class="container-fluid">descrição: {{pessoa.doar}}</p>
+
+
+
+{% endfor %}
+{% endblock %}

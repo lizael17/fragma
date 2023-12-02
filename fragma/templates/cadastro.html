@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 bg-white p-2 border border-secondary p-3 mb-3">
+      <h2 class="mb-4">crie sua conta!!!</h2>
+      <form method="post" action="{% url 'pagina' %}">
+        {% csrf_token %}
+        
+        <div class="form-group">
+          <label for="nome ">Nome:</label>
+          {{ form.nome }}
+        </div>
+
+        <div class="form-group">
+          <label for="idade ">Idade:</label>
+          {{ form.idade }}
+        </div>
+
+        <div class="form-group">
+          <label for="chave ">chave Pix:</label>
+          {{ form.chave }}
+        </div>
+
+        <div class="form-group">
+          <label for="doar form-control form-control-lg">qual o Motivo?:</label>
+          {{ form.doar }}
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block ">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
